@@ -1,0 +1,1273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+.nav-container{
+    background-color: #232526;
+    height: 100vh;
+}
+nav {
+    width: 100%;
+    background: transparent;
+    height: 100vh;
+    z-index: 1;
+}
+nav #brand {
+    float: left;
+    margin-left: -100%;
+}
+nav #menu {
+    border-bottom: 1px solid #808080;
+}
+
+nav #menu li {
+    display: inline-block;
+    padding: 0px 66px;
+    cursor: pointer;
+    line-height: 80px;
+}
+
+nav #menu li a {
+    color: #808080;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+nav #menu li span{
+    color: #ffffff3b;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav #menu li a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.toggle {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.toggle .span {
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease-out;
+    backface-visibility: hidden;
+    margin: 5px auto;
+}
+
+.toggle.on #one {
+    transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+.toggle.on #two {
+    opacity: 0;
+}
+
+.toggle.on #three {
+    transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#resize {
+    z-index: 1;
+    top: 0px;
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+    display: table;
+}
+
+#resize #menu {
+    height: 90px;
+    display: table-cell;
+    vertical-align: center;
+}
+
+#resize #menu li {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 50px;
+    min-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+    margin-top:140px;
+}
+
+#resize #menu li a {
+    color: #fff;
+}
+
+#resize.active {
+    visibility: visible;
+    opacity: 0.99;
+}
+
+.header {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #A9A9A9;
+    letter-spacing: 4rem;
+}
+
+.header h1 {
+    font-size: 100px;
+    font-weight: 100;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    mix-blend-mode: overlay;
+}
+.header-1{
+    transform: rotate(90deg);
+}
+.header-1 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.box {
+    background: black;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+.bike{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.brand-header{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+.brand1, .brand2{
+    color: white;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+.brand1 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+.brand2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.card-container{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 30%; 
+    display: grid;
+}
+   
+.card{
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
+      background: linear-gradient(130deg,
+                  rgba(251,251,254,.6),
+                  rgba(251,251,254,.2));
+      box-shadow: inset 2px 2px 1px rgba(251,251,254,.3)
+                  inset -2px -2px 1px rgba(251,251,254,.2);
+      backdrop-filter: blur(2px);
+}  
+.card h1{
+    font-size: 20px;
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    width: 79%;
+    border-bottom: 1px solid rgb(223, 220, 220);
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+.card h2{
+    font-size: 20px;
+    letter-spacing: .1rem;
+    line-height: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+.card h3{
+    font-size: 15px;
+    letter-spacing: .1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.about-container{
+    background-color: black;
+    padding: 5% 0%;
+    overflow: hidden;
+}
+.about-head img{
+    width: 30%;
+    height: 30%;
+}
+.about1-img{
+     width: 40%;
+     height: 40%;
+     margin-left: 30%;
+}
+.about1 h1{
+    color: rgb(141, 140, 140);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    width: 30%;
+    margin-left: 50%;
+}
+
+.about2-img{
+    width: 35%;
+    height: 35%;
+    margin-left: 30%;
+    padding: 10% 0%;
+}
+.about2 h1{
+    color: rgb(141, 140, 140);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    width: 30%;
+    margin-left: 50%;
+    margin-top: -5%;
+}
+.about3-img{
+    width: 35%;
+    height: 35%;
+    margin-left: 30%;
+    padding: 10% 0%;
+}
+.about3 h1{
+    color: rgb(141, 140, 140);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    width: 30%;
+    margin-left: 50%;
+    margin-top: -5%;
+}
+
+.cycle-container{
+    padding: 10% 0%;
+    position: relative;
+}
+.cycles{
+    display: block;
+    color: black;
+}
+
+.cycle, .cycle1, .cycle2, .cycle3{
+    text-align: center;
+}
+
+.cycle-heading h1{
+    font-size: 25px;
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+.cycle-heading h2{
+    font-size: 60px;
+    width: 10%;
+    letter-spacing: .1rem;
+    line-height: 4rem;
+    font-family: 'Arimo', sans-serif;
+}
+.cycle-heading a{
+    font-size: 15px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+.cycle-heading a:hover{
+    text-decoration: underline;
+    padding-right: .5%;
+}
+
+.cycle .cycle-heading{
+    text-align: start;
+    position: absolute;
+    top: 12%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.cycle1 .cycle-heading{
+    text-align: start;
+    position: absolute;
+    top: 33%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.cycle2 .cycle-heading{
+    text-align: start;
+    position: absolute;
+    top: 52%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+.cycle3 .cycle-heading{
+    text-align: start;
+    position: absolute;
+    top: 74%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+}
+
+
+.block{
+    padding: 100px;
+    margin-top: -500px;
+    float: left;
+}
+.block h1{
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    width: 45%;
+    font-weight: bolder;
+}
+
+.block a{
+    font-size: 22px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    line-height: 5rem;
+}
+.block a:hover{
+    text-decoration: underline;
+    padding-right: .5%;
+}
+.parallax{
+    padding-top: 300px;
+    padding-bottom: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(cycle5.jpeg);
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+} 
+
+.action-container{
+    padding: 5% 5%;
+}
+.action-heading{
+    padding: 10%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    width: 55%;
+}
+.action-heading h1 span{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.horz-containerr{ 
+    width: 100%;
+    margin: 10px auto;
+    display: flex; 
+    align-items: center;
+}
+
+.horzs {
+    margin: .8%;
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+}
+
+.horzs img {   
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.horz-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+.horzs:hover .horz-fade {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.content {
+    width: 70%;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #fff;
+    line-height: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.content a{
+    color:white;
+}
+.content .ptn{
+    font-size: 15px;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    font-family: 'Orbitron', sans-serif; 
+}
+
+.content .ptn:hover{
+    text-decoration: underline;
+    padding-right: .5%;
+}
+
+.offers{
+    text-align: center;
+    padding: 4% 0%;
+}
+.stn{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    font-family: 'Orbitron', sans-serif;  
+}
+.stn:hover{
+    text-decoration: underline;
+    padding-right: .5%;
+}
+
+#rating{
+    background-color: black;
+}
+.rating-container{
+    width: 50%;
+    margin-left: 25%;
+    padding: 2% 0%;
+}
+
+.rating-container h1{
+    width: 70%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    color: white;
+    line-height: 2rem;
+}
+.rating-container p{
+    width: 60%;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.384);
+}
+.logo-slider .item{
+    background-color: black;
+    border-radius: 8px;
+    padding: 50px;
+}
+
+
+.logo-slider .slick-next:before{
+    color: rgba(250, 250, 250, 0.308);
+    font-size: 40px;
+}
+.logo-slider .slick-prev:before{
+    color: black;
+    font-size: 0px;
+}
+
+.select-container{
+    padding: 2.3% 0%;
+}
+.select-containerr{
+    display: flex;
+}
+
+.select-left{
+    flex-basis: 60%;
+    padding: 8rem;
+}
+.select-right{
+    flex-basis: 40%;
+    padding: 9rem;
+}
+.select-left img{
+    width: 110%;
+}
+.select-right h1{
+    width: 55%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+}
+.select-right a{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.555);
+    font-weight: bolder;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    line-height: 5rem;
+}
+.select-right a:hover{
+    text-decoration: underline;
+    padding-right: .5%;
+}
+
+.details-container{
+    padding: 5% 0%;
+    width: 80%;
+    margin-left: 15%;
+}
+.details{
+    display: flex;
+}
+
+.detail{
+    padding: 3rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.178);
+    line-height: 3rem;
+    text-align: center;
+}
+.detail h1{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+.detail a{
+    font-size: 12px;
+    color: red;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    font-family: 'Orbitron', sans-serif; 
+}
+.detail a:hover{
+    text-decoration: underline;
+}
+
+.footer-container{
+    background-color: black;
+}
+.footer {
+    width: 80%;
+    height: auto;
+}
+.footer-content{
+    height: auto;
+    display:flex;
+    padding: 40px 144px;
+    width: 100%;
+}
+.footer-section {
+    width: 30%;
+}
+
+.footer-section li {
+    list-style:none;
+    line-height: 2rem;
+}
+.footer-section li a {
+    text-decoration:none;
+    color: white;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;   
+}
+.footer-section li a:hover {
+    text-decoration: underline;
+}
+.footer-section h1{
+    color:white;
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 20px;
+    line-height: 4rem;
+    letter-spacing: .2rem;
+}
+.footer-section h2{
+    color: rgba(255, 255, 255, 0.377);
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+    font-size: 13px;
+}  
+.footer-section h3 {
+    color: white;
+    line-height: 4rem;
+    font-size: 13px;
+    font-family: 'Orbitron', sans-serif; 
+    letter-spacing: .2rem;
+}
+.footer-bottom{
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 125%;
+}
+.footer-bottom h1{
+    color:white;
+    font-family: 'Orbitron', sans-serif; 
+    border-top: 1px solid rgba(255, 255, 255, 0.466);
+    font-size: 10px;
+    line-height: 4rem;
+    letter-spacing: .3rem;
+}
+.footer-bottom h1 span{
+    color:rgba(255, 255, 255, 0.411);
+    font-size: 11px;
+    letter-spacing: .5rem;
+}
+
+@media(max-width:1500px) {
+    nav #menu li {
+        padding: 0px 60px;
+    }
+}
+
+@media(max-width: 1300px) {
+    .nav-container{
+        width: 100%;
+    }
+    nav #brand {
+        float: left;
+        display: block;
+        margin-left: 84px;
+        color: #ffffff3b;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: .1rem;
+        line-height: 5rem;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'Orbitron', sans-serif;
+    }
+    .header {
+        width: 100%;
+        position: absolute;
+        top: 92%;
+        left: 50%;
+    }
+    .header h1{
+        font-size: 90px;
+        letter-spacing: 3.3rem;
+    }
+    .brand-container{
+        width: 100%;
+    }
+    .bike{
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 65%;
+     }
+    .brand-header{
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+    }
+    .brand1, .brand2{
+        font-size: 100px;
+    }
+    .card-container{
+        position: absolute;
+        top: 70%;
+        left: 20%;
+        width: 42%; 
+    } 
+    .card{
+        padding: .8rem;
+    }
+    .card h1{
+        font-size: 18px;
+    }
+    .card h2{
+        font-size: 18px;
+    }
+    .card h3{
+        font-size: 13px;
+    }
+
+    .about-container{
+        width: 100%;
+        overflow: hidden;
+    }
+    .about1-img{
+         width: 60%;
+         margin-left: 20%;
+    }
+    .about1 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    
+    .about2-img{
+        width: 60%;
+        margin-left: 20%;
+        padding: 10% 0%;
+    }
+    .about2 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    .about3-img{
+        width: 60%;
+        margin-left: 20%;
+        padding: 10% 0%;
+    }
+    .about3 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    .cycle-container{
+        width: 100%;
+    }
+    .cycles img{
+        width: 90%;
+    }
+
+    .cycle-heading h1{
+        font-size: 25px;
+        line-height: 2rem;
+    }
+    .cycle-heading  h2{
+        font-size: 25px;
+        line-height: 3rem;
+    }
+    .cycle-heading a{
+        font-size: 18px;
+        line-height: 1rem;
+    }
+    .cycle .cycle-heading{
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+    .cycle1 .cycle-heading{
+        position: absolute;
+        top: 32%;
+        left: 78%;
+    }
+    .cycle2 .cycle-heading{
+        position: absolute;
+        top: 53%;
+        left: 25%;
+    }
+    .cycle3 .cycle-heading{
+        position: absolute;
+        top: 78%;
+        left: 78%;
+    }
+    .school-container{
+        width: 100%;
+    }
+    .block h1{
+        font-size: 40px;
+        width: 110%;
+    }
+    .action-container{
+        width: 90%;
+    }
+    .horz-containerr svg{
+        width: 12%;
+        height: 20%;
+    }   
+    .action-heading{
+        font-size: 38px;
+        width: 80%;
+    }
+    .content {
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+    .content .ptn{
+        font-size: 12px;
+    }
+    .rating-container{
+        width: 100%;
+        margin-left: -8%;
+    }
+    .rating-container h1{
+        width: 55%;
+        font-size: 18px;
+    }
+    .rating-container p{
+        width: 50%;
+        font-size: 15px;
+    }
+    .logo-slider .item{
+        background-color: black;
+        border-radius: 8px;
+        padding: 100px;
+    }
+    .select-containerr{
+        display: block;
+    }
+    .select-left{
+        padding: 0rem;
+    }
+    .select-left img{
+        width: 100%;
+    }
+    .select-right{
+        padding: 5rem;
+    }
+    .select-right h1{
+        width: 80%;
+        font-size: 40px;
+    }
+    .select-right a{
+        line-height: 4rem;
+        font-size: 20px;
+    }
+    .details-container{
+        width: 60%;
+    }
+    .details{
+        display: block;
+    }
+    .detail{
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        border-right: 0px solid rgba(0, 0, 0, 0.178);
+        line-height: 3rem;
+        text-align: center;
+    }
+    .detail h1{
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
+    }
+    .footer {
+        width: 80%;
+    }
+    .footer-content{
+        padding: 0px 0px;
+        width: 120%;
+    }
+    .footer-section:nth-child(2){
+        margin-left: 3%;
+    }
+    .footer-section:nth-child(3){
+        margin-left: 3%;
+    }
+    .footer-section:nth-child(4){
+        margin-left: 3%;
+    }
+    .footer-section:nth-child(5){
+        margin-left: 3%;
+    }
+    .footer-section h1{
+        font-size: 20px;
+        line-height: 2rem;
+    }
+    .footer-section h2{
+        line-height: 2rem;
+        font-size: 15px;
+        width: 100%;
+    }  
+    .footer-section h3 {
+        font-size: 15px;
+        line-height: 2rem;
+    }
+    .footer-section li {
+        line-height: 2rem;
+    }
+    .footer-section li a{
+        font-size: 15px;
+        width: 100%;
+    }
+    .footer-bottom{
+        margin-top: 4%;
+    }
+    .footer-bottom h1{
+        font-size: 10px;
+    }
+    .footer-bottom h1 span{
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 800px) {
+    .header {
+        width: 100%;
+        position: absolute;
+        top: 42%;
+        left: 50%;
+    }
+    .header h1{
+        font-size: 90px;
+        letter-spacing: 3.3rem;
+    }
+    .header-1{
+        transform: rotate(0deg);
+    }
+}
+@media(max-width: 600px) {
+    .nav-container{
+        width: 100%;
+    }
+    nav #brand {
+        float: left;
+        display: block;
+        margin-left: 84px;
+        color: #ffffff3b;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: .1rem;
+        line-height: 5rem;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'Orbitron', sans-serif;
+    }
+    .header {
+        width: 100%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+    }
+    .header h1{
+        font-size: 40px;
+        letter-spacing: 2.1rem;
+    }
+    .header-1{
+        transform: rotate(0deg);
+    }
+    .brand-container{
+        width: 100%;
+    }
+    .bike{
+        width: 105%;
+        position: absolute;
+        left: 47%;
+     }
+    .brand-header{
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+    }
+    .brand1, .brand2{
+        font-size: 80px;
+    }
+    .card-container{
+        position: absolute;
+        top: 85%;
+        left: 49%;
+        width: 100%; 
+    } 
+    .card{
+        padding: 1.5rem;
+    }
+    .card h1{
+        font-size: 20px;
+    }
+    .card h2{
+        font-size: 20px;
+    }
+    .card h3{
+        font-size: 15px;
+    }
+
+    .about-container{
+        width: 100%;
+        overflow: hidden;
+    }
+    .about1-img{
+         width: 60%;
+         margin-left: 20%;
+    }
+    .about1 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    
+    .about2-img{
+        width: 60%;
+        margin-left: 20%;
+        padding: 10% 0%;
+    }
+    .about2 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    .about3-img{
+        width: 60%;
+        margin-left: 20%;
+        padding: 10% 0%;
+    }
+    .about3 h1{
+        color: rgb(141, 140, 140);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        width: 60%;
+        margin-left: 25%;
+    }
+    .cycle-container{
+        width: 100%;
+    }
+    .cycles img{
+        width: 90%;
+    }
+
+    .cycle-heading h1{
+        font-size: 12px;
+        line-height: 1.5rem;
+    }
+    .cycle-heading  h2{
+        font-size: 15px;
+        line-height: 1rem;
+    }
+    .cycle-heading a{
+        font-size: 10px;
+        line-height: 1rem;
+    }
+    .cycle .cycle-heading{
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+    .cycle1 .cycle-heading{
+        position: absolute;
+        top: 30%;
+        left: 25%;
+    }
+    .cycle2 .cycle-heading{
+        position: absolute;
+        top: 52%;
+        left: 25%;
+    }
+    .cycle3 .cycle-heading{
+        position: absolute;
+        top: 75%;
+        left: 25%;
+    }
+    .school-container{
+        width: 100%;
+    }
+    .block h1{
+        font-size: 22px;
+        width: 110%;
+    }
+    .action-container{
+        width: 90%;
+    }
+    .horz-containerr svg{
+        width: 12%;
+        height: 20%;
+    }
+    .action-heading{
+        font-size: 21px;
+    }
+    .content {
+        font-size: 10px;
+        line-height: 1rem;
+    }
+    .content .ptn{
+        font-size: 8px;
+    }
+    .rating-container{
+        width: 105%;
+        margin-left: -20%;
+    }
+    .rating-container h1{
+        width: 55%;
+        font-size: 12px;
+    }
+    .rating-container p{
+        width: 50%;
+        font-size: 12px;
+    }
+    .logo-slider .item{
+        background-color: black;
+        border-radius: 8px;
+        padding: 100px;
+    }
+    .select-containerr{
+        display: block;
+    }
+    .select-left{
+        padding: 0rem;
+    }
+    .select-left img{
+        width: 100%;
+    }
+    .select-right{
+        padding: 2rem;
+    }
+    .select-right h1{
+        width: 80%;
+    }
+    .select-right a{
+        line-height: 4rem;
+    }
+    .details-container{
+        width: 60%;
+    }
+    .details{
+        display: block;
+    }
+    .detail{
+        width: 80%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        border-right: 0px solid rgba(0, 0, 0, 0.178);
+        line-height: 3rem;
+        text-align: center;
+    }
+    .detail h1{
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }
+    .footer {
+        width: 80%;
+    }
+    .footer-content{
+        display: block;
+        padding: 0px 60px;
+        width: 40%;
+    }
+    .footer-section{
+        width: 100%;
+    }
+    .footer-section h1{
+        font-size: 20px;
+        width: 200%;
+    }
+    .footer-section h2{
+        width: 200%;
+        line-height: 2rem;
+        font-size: 15px;
+    }  
+    .footer-section h3 {
+        font-size: 20px;
+        width: 200%;
+    }
+    .footer-section li {
+        line-height: 4rem;
+    }
+    .footer-section li a{
+        font-size: 17px;
+    }
+    .footer-bottom h1{
+        font-size: 12px;
+    }
+    .footer-bottom h1 span{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .toggle {
+          visibility: visible;
+          opacity: 1;
+          margin-top: 6px;
+    }
+
+    nav #brand {
+          margin-left: 18px;
+    }
+
+    #menu a {
+          font-family: "Poppins";
+          font-weight: 200;
+          font-size: 20px;
+    }
+
+    nav #menu {
+          display: none;
+    }
+}
